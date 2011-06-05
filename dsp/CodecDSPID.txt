@@ -2,7 +2,11 @@ Original,/system/etc/soundimage/Sound_Original.txt
 Original_SPK,/system/etc/soundimage/Sound_Original_SPK.txt
 Original_Recording,/system/etc/soundimage/Sound_Original_Recording.txt
 Recording,/system/etc/soundimage/Sound_Recording.txt
+DualMic_Phone_EP,/system/etc/soundimage/Sound_Dualmic_EP.txt
+DualMic_Phone_SPK,/system/etc/soundimage/Sound_Dualmic_SPK.txt
 Original_Phone,/system/etc/soundimage/Sound_Original.txt
+DualMic_Phone,/system/etc/soundimage/Sound_Phone_Original_REC.txt
+DualMic_Phone_SPK,/system/etc/soundimage/Sound_Phone_Original_SPK.txt
 Original_Phone_REC,/system/etc/soundimage/Sound_Phone_Original_REC.txt
 Original_Phone_SPK,/system/etc/soundimage/Sound_Phone_Original_SPK.txt
 Original_Phone_HP,/system/etc/soundimage/Sound_Phone_Original_HP.txt
