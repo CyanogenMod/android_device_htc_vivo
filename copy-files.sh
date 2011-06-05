@@ -38,6 +38,9 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 cp $STAGESYS/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
+cp $STAGESYS/bin/qmuxd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/bin/netmgrd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/bin/rild_ims ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -57,6 +60,8 @@ cp $STAGESYS/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libhtc_ril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libril_ims.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -84,11 +89,15 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:obj/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:obj/lib/libril.so
 
 # All the blobs necessary for vivo
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/rild_ims:/system/bin/rild_ims \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/awb_camera:/system/bin/awb_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bma150_usr:/system/bin/bma150_usr \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \\
@@ -107,6 +116,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril_ims.so:/system/lib/libril_ims.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\

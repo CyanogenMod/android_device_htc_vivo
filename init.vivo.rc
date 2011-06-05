@@ -1,5 +1,8 @@
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
+# + SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
+    mkdir /data/radio 0770 radio radio
+# - SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
 
 on fs
     mkdir /system
@@ -57,14 +60,20 @@ on fs
     # bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
 
-    # Permissions for Liblights.
+     # Permissions for Liblights.
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/amber/brightness
     chown system system /sys/class/leds/amber/blink
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/jogball-backlight/brightness
+    chown system system /sys/class/leds/jogball-backlight/color
+    chown system system /sys/class/leds/jogball-backlight/period
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
-    chown system system /sys/class/leds/keyboard-backlight/brightness
 
     chown system camera /sys/class/leds/flashlight/brightness
     chmod 0660          /sys/class/leds/flashlight/brightness
@@ -121,6 +130,16 @@ service udhcpd /system/bin/udhcpd
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     user root
+
+# + SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
+service qmuxd /system/bin/qmuxd
+
+service netmgrd /system/bin/netmgrd
+
+on property:ro.use_data_netmgrd=false
+    # netmgr not supported on specific target
+    stop netmgrd
+# - SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root
