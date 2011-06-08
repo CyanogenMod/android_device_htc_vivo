@@ -58,6 +58,9 @@ cp $STAGESYS/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libaudioeq.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libOmxCore.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libOmxVdec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libOmxVenc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -76,8 +79,6 @@ cp $STAGESYS/lib/libidl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libnetmgr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libdsutils.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libqdp.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-
-
 
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
@@ -128,6 +129,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVenc.so:/system/lib/libOmxVenc.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
