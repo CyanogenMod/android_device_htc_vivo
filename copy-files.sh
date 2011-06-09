@@ -47,6 +47,7 @@ cp $STAGESYS/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/logcat2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/lsc_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/bin/snd3254 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/egl/libEGL_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -99,7 +100,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:obj/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:obj/lib/libril.so
 
 # All the blobs necessary for vivo
 PRODUCT_COPY_FILES += \\
@@ -113,6 +115,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lsc_camera:/system/bin/lsc_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/snd3254:/system/bin/snd3254 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\

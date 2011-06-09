@@ -30,6 +30,7 @@ adb pull /system/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprieta
 adb pull /system/bin/logcat2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/lsc_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/bin/snd3254 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -81,11 +82,15 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:obj/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:obj/lib/libwebkitaccel.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:obj/lib/libril.so
 
 # All the blobs necessary for vivo
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/rild:/system/bin/rild \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/awb_camera:/system/bin/awb_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bma150_usr:/system/bin/bma150_usr \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \\
@@ -101,14 +106,26 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:/system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVenc.so:/system/lib/libOmxVenc.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:/system/lib/libwebkitaccel.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libwebkitaccel.so:/system/lib/libwebkitaccel.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqmi.so:/system/lib/libqmi.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdll.so:/system/lib/libdll.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdiag.so:/system/lib/libdiag.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libidl.so:/system/lib/libidl.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnetmgr.so:/system/lib/libnetmgr.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsutils.so:/system/lib/libdsutils.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqdp.so:/system/lib/libqdp.so
 EOF
 
 ./setup-makefiles.sh
