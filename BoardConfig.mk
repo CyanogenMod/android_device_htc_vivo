@@ -55,7 +55,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
-BOARD_EGL_CFG := device/htc/msm7x30-common/egl.cfg
+BOARD_EGL_CFG := device/htc/vivo/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
@@ -75,9 +75,6 @@ BOARD_NO_RGBX_8888 := true
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 BOARD_USE_BROADCOM_FM_VOLUME_HACK := true
-
-# inherit from common msm7x30
--include device/htc/msm7x30-common/msm7x30.mk
 
 # inherit from the proprietary version
 -include vendor/htc/vivo/BoardConfigVendor.mk
