@@ -106,7 +106,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/vivo/kernel
+TARGET_PREBUILT_KERNEL := device/htc/vivo/prebuilt/kernel
 
 TARGET_PROVIDES_LIBRIL := vendor/htc/vivo/proprietary/libril.so
 
