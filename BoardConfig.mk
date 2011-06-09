@@ -106,6 +106,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/vivo/prebuilt/kernel
 
 TARGET_PROVIDES_LIBRIL := vendor/htc/vivo/proprietary/libril.so
+BOARD_USE_NEW_LIBRIL_HTC := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
