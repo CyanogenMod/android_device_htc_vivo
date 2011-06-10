@@ -71,8 +71,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/vivo/overlay
 
-PRODUCT_COPY_FILES += \
-
 # gsm config xml file
 PRODUCT_COPY_FILES += \
     device/htc/vivo/spn-conf.xml:system/etc/spn-conf.xml \

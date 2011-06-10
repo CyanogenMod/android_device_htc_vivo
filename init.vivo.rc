@@ -1,8 +1,6 @@
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
-# + SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
     mkdir /data/radio 0770 radio radio
-# - SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
 
 on fs
     mkdir /system
@@ -22,11 +20,11 @@ on fs
     mkdir /data/d 0777 system system
     mount debugfs /data/d /data/d
 
-    chmod 0664 /sys/module/gpio_event/parameters/phone_call_status
     chown radio system /sys/module/gpio_event/parameters/phone_call_status
+    chmod 0664         /sys/module/gpio_event/parameters/phone_call_status
 
-    chmod 0640 /sys/camera_led_status/led_ril_status
     chown radio system /sys/camera_led_status/led_ril_status
+    chmod 0640         /sys/camera_led_status/led_ril_status
 
     chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
 
@@ -45,9 +43,13 @@ on fs
     chown system system /sys/class/optical_sensors/lightsensor/ls_kadc
     chown system radio  /sys/class/optical_sensors/proximity/ps_adc
     chown system system /sys/class/optical_sensors/proximity/ps_kadc
-    chmod 0666 /sys/class/optical_sensors/proximity/ps_kadc
+    chmod 0666          /sys/class/optical_sensors/proximity/ps_kadc
     chown system system /sys/class/optical_sensors/proximity/ps_led
     chown system system /sys/class/optical_sensors/proximity/ps_test_mode
+
+    # for charging function
+    chown radio radio /sys/class/power_supply/battery/charger_control
+    chmod 0660        /sys/class/power_supply/battery/charger_control
 
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -65,13 +67,6 @@ on fs
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/amber/brightness
     chown system system /sys/class/leds/amber/blink
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/jogball-backlight/brightness
-    chown system system /sys/class/leds/jogball-backlight/color
-    chown system system /sys/class/leds/jogball-backlight/period
     chown system system /sys/class/leds/button-backlight-portrait/brightness
     chown system system /sys/class/leds/button-backlight-landscape/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
@@ -132,7 +127,6 @@ service udhcpd /system/bin/udhcpd
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     user root
 
-# + SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
 service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
@@ -140,7 +134,6 @@ service netmgrd /system/bin/netmgrd
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop netmgrd
-# - SSD_RIL: Otis: from Qualcomm QMI and Netmgrd
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root

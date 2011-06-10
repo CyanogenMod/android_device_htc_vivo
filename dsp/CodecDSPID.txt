@@ -24,4 +24,3 @@ Rock,/system/etc/soundimage/Sound_Rock.txt
 Treble Booster,/system/etc/soundimage/Sound_Treble_Booster.txt
 Vocal Booster,/system/etc/soundimage/Sound_Vocal_Booster.txt
 DualMic_Phone,/system/etc/soundimage/Sound_Phone_Original_REC.txt
-
