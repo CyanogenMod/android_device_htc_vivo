@@ -104,6 +104,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/vivo/prebuilt/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/vivo/prebuilt/kernel
 
 TARGET_PROVIDES_LIBRIL := vendor/htc/vivo/proprietary/libril.so
 BOARD_USE_NEW_LIBRIL_HTC := true
