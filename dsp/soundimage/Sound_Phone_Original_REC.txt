@@ -28,7 +28,7 @@ w 30 7b 01 # Reference Power-up Configuration Register
 w 30 0a 3b # Common Mode Control Register
 w 30 00 00 # Page Select Register
 w 30 04 03 # Clock Setting Register 1, Multiplexers
-w 30 05 91 # Clock Setting Register 2, PLL P&R Values_16K 92
+w 30 05 91 # Clock Setting Register 2, PLL P&R Values
 w 30 06 08 # Clock Setting Register 3, PLL J Values
 w 30 07 00 # Clock Setting Register 4, PLL D Values (MSB)
 w 30 08 00 # Clock Setting Register 5, PLL D Values (LSB)
@@ -4629,9 +4629,9 @@ w 30 0c 40 # C1 (23:16) DAC Buffer A
 w 30 0d 00 # C1 (15:8) DAC Buffer A
 w 30 0e 00 # C1 (7:0) DAC Buffer A
 w 30 0f 00 # C1 Reserved
-w 30 10 07 # C2 (23:16) DAC Buffer A
-w 30 11 ae # C2 (15:8) DAC Buffer A
-w 30 12 14 # C2 (7:0) DAC Buffer A
+w 30 10 00 # C2 (23:16) DAC Buffer A
+w 30 11 00 # C2 (15:8) DAC Buffer A
+w 30 12 00 # C2 (7:0) DAC Buffer A
 w 30 13 00 # C2 Reserved
 w 30 14 ff # C3 (23:16) DAC Buffer A
 w 30 15 ff # C3 (15:8) DAC Buffer A
@@ -6444,17 +6444,17 @@ w 30 44 f5 # C195 (23:16) DAC Buffer B
 w 30 45 d5 # C195 (15:8) DAC Buffer B
 w 30 46 25 # C195 (7:0) DAC Buffer B
 w 30 47 00 # C195 Reserved
-w 30 48 2a # C196 (23:16) DAC Buffer B
-w 30 49 e1 # C196 (15:8) DAC Buffer B
-w 30 4a 48 # C196 (7:0) DAC Buffer B
+w 30 48 2c # C196 (23:16) DAC Buffer B
+w 30 49 cc # C196 (15:8) DAC Buffer B
+w 30 4a cd # C196 (7:0) DAC Buffer B
 w 30 4b 00 # C196 Reserved
-w 30 4c 55 # C197 (23:16) DAC Buffer B
-w 30 4d c2 # C197 (15:8) DAC Buffer B
-w 30 4e 8f # C197 (7:0) DAC Buffer B
+w 30 4c 59 # C197 (23:16) DAC Buffer B
+w 30 4d 99 # C197 (15:8) DAC Buffer B
+w 30 4e 9a # C197 (7:0) DAC Buffer B
 w 30 4f 00 # C197 Reserved
-w 30 50 0c # C198 (23:16) DAC Buffer B
-w 30 51 cc # C198 (15:8) DAC Buffer B
-w 30 52 cd # C198 (7:0) DAC Buffer B
+w 30 50 0f # C198 (23:16) DAC Buffer B
+w 30 51 5c # C198 (15:8) DAC Buffer B
+w 30 52 29 # C198 (7:0) DAC Buffer B
 w 30 53 00 # C198 Reserved
 w 30 54 00 # C199 (23:16) DAC Buffer B
 w 30 55 04 # C199 (15:8) DAC Buffer B

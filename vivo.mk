@@ -81,21 +81,43 @@ PRODUCT_PACKAGES += \
     sensors.vivo \
     gps.vivo
 
-# Keylayouts
+# Keychars
 PRODUCT_COPY_FILES += \
     device/htc/vivo/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
     device/htc/vivo/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
     device/htc/vivo/keychars/vivo-keypad.kcm.bin:system/usr/keychars/vivo-keypad.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-ara.kcm.bin:system/usr/keychars/vivo-keypad-ara.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-ell.kcm.bin:system/usr/keychars/vivo-keypad-ell.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-fra.kcm.bin:system/usr/keychars/vivo-keypad-fra.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-ger.kcm.bin:system/usr/keychars/vivo-keypad-ger.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-ita.kcm.bin:system/usr/keychars/vivo-keypad-ita.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-tur.kcm.bin:system/usr/keychars/vivo-keypad-tur.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-wwe-bopomo.kcm.bin:system/usr/keychars/vivo-keypad-wwe-bopomo.kcm.bin \
+    device/htc/vivo/keychars/vivo-keypad-wwe.kcm.bin:system/usr/keychars/vivo-keypad-wwe.kcm.bin
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
     device/htc/vivo/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/vivo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/vivo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/vivo/keylayout/vivo-keypad.kl:system/usr/keylayout/vivo-keypad.kl
+    device/htc/vivo/keylayout/vivo-keypad.kl:system/usr/keylayout/vivo-keypad.kl \
+    device/htc/vivo/keylayout/vivo-keypad-ara.kl:system/usr/keylayout/vivo-keypad-ara.kl \
+    device/htc/vivo/keylayout/vivo-keypad-ell.kl:system/usr/keylayout/vivo-keypad-ell.kl \
+    device/htc/vivo/keylayout/vivo-keypad-fra.kl:system/usr/keylayout/vivo-keypad-fra.kl \
+    device/htc/vivo/keylayout/vivo-keypad-ger.kl:system/usr/keylayout/vivo-keypad-ger.kl \
+    device/htc/vivo/keylayout/vivo-keypad-ita.kl:system/usr/keylayout/vivo-keypad-ita.kl \
+    device/htc/vivo/keylayout/vivo-keypad-tur.kl:system/usr/keylayout/vivo-keypad-tur.kl \
+    device/htc/vivo/keylayout/vivo-keypad-wwe-bopomo.kl:system/usr/keylayout/vivo-keypad-wwe-bopomo.kl \
+    device/htc/vivo/keylayout/vivo-keypad-wwe.kl:system/usr/keylayout/vivo-keypad-wwe.kl
 
 # Firmware
 PRODUCT_COPY_FILES += \
     device/htc/vivo/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+
     device/htc/vivo/firmware/default.acdb:system/etc/firmware/default.acdb \
+    device/htc/vivo/firmware/default_mfg.acdb:system/etc/firmware/default_mfg.acdb \
     device/htc/vivo/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
+    device/htc/vivo/firmware/default_org_nel.acdb:system/etc/firmware/default_org_nel.acdb \
     device/htc/vivo/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
     device/htc/vivo/firmware/vidc_720p_h263_dec_mc.fw:system/etc/firmware/vidc_720p_h263_dec_mc.fw \
     device/htc/vivo/firmware/vidc_720p_h264_dec_mc.fw:system/etc/firmware/vidc_720p_h264_dec_mc.fw \
@@ -121,6 +143,7 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/dsp/CodecDSPID_BCLK.txt:system/etc/CodecDSPID_BCLK.txt \
     device/htc/vivo/dsp/CodecDSPID_NEL.txt:system/etc/CodecDSPID_NEL.txt \
     device/htc/vivo/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
+    device/htc/vivo/dsp/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
     device/htc/vivo/dsp/soundimage/Sound_Bass_Booster.txt:system/etc/soundimage/Sound_Bass_Booster.txt \
     device/htc/vivo/dsp/soundimage/Sound_Blues.txt:system/etc/soundimage/Sound_Blues.txt \
     device/htc/vivo/dsp/soundimage/Sound_Classical.txt:system/etc/soundimage/Sound_Classical.txt \
@@ -153,7 +176,9 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/dsp/soundimage/Sound_SRS_V_HP.txt:system/etc/soundimage/Sound_SRS_V_HP.txt \
     device/htc/vivo/dsp/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
     device/htc/vivo/dsp/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
-    device/htc/vivo/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt 
+    device/htc/vivo/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt \
+    device/htc/vivo/dsp/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
+    device/htc/vivo/dsp/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt
  
 PRODUCT_COPY_FILES += \
     device/htc/vivo/vold.fstab:system/etc/vold.fstab

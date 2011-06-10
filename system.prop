@@ -22,7 +22,7 @@ ro.ril.enable.sdr=1
 ro.ril.enable.amr.wideband=0
 
 # vivo RF team request
-ro.ril.enable.dtm=0
+ro.ril.enable.dtm=1
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
@@ -31,6 +31,13 @@ ro.ril.hsxpa=2
 # Default network type.
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
+
+# Define TCP buffer sizes
+net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
+
+# system props for the data modules
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=8
 
 wifi.interface=eth0
 wifi.supplicant_scan_interval=15
@@ -50,8 +57,9 @@ ro.ril.def.agps.mode=2
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
 
-# For vivo China NEL
-ro.ril.update.org.acoustic=1
+# Vivo China NEL use
+ro.ril.update.vivo.acoustic=1
 
-# Define TCP buffer sizes
-net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
+# Properties of Scalado Denoise param.
+postprocess.iso_midband=400
+postprocess.denoise_level=5
