@@ -56,6 +56,7 @@ cp $STAGESYS/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libposteffect.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libOmxCore.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libOmxVdec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -111,6 +112,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libposteffect.so:/system/lib/libposteffect.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\

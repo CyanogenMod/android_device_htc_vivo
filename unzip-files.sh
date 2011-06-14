@@ -40,6 +40,7 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudio.so -d  ../../../ve
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudioalsa.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcamera.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboemcamera.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libposteffect.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgemini.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxCore.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVdec.so -d  ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -93,6 +94,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libposteffect.so:/system/lib/libposteffect.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
