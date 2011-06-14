@@ -203,9 +203,6 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product-if-exists, vendor/htc/vivo/vivo-vendor.mk)
 
-# common msm7x30 configs
-$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
-
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/vivo/media_a1026.mk)
 
