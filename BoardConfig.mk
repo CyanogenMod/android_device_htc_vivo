@@ -43,8 +43,12 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 BOARD_HAVE_HTC_FFC := true
 BOARD_USE_REVERSE_FFC := true
+
 # Workaround for Vivo's broken overlay scaling
 BOARD_OVERLAY_MINIFICATION_LIMIT := 2
+
+BOARD_PREBUILT_LIBAUDIO := false
+BOARD_USE_BROADCOM_FM_VOLUME_HACK := false
 
 # cat /proc/emmc
 #dev:        size     erasesize name

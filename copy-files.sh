@@ -52,7 +52,6 @@ cp $STAGESYS/lib/egl/libGLESv2_adreno200.so ../../../vendor/$MANUFACTURER/$DEVIC
 cp $STAGESYS/lib/egl/libq3dtools_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-cp $STAGESYS/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -83,7 +82,6 @@ cp $STAGESYS/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:obj/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so
 
 # All the blobs necessary for vivo
@@ -103,7 +101,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudio.so:/system/lib/libaudio.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
