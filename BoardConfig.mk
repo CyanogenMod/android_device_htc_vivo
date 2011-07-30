@@ -46,6 +46,8 @@ BOARD_USE_REVERSE_FFC := true
 # Workaround for Vivo's broken overlay scaling
 BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
+BOARD_PREBUILT_LIBAUDIO := false
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p17: 00040000 00000200 "misc"
