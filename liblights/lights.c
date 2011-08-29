@@ -41,7 +41,9 @@ char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 char const*const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
 char const*const BLUE_LED_FILE = "/sys/class/leds/blue/brightness";
 
-char const*const BUTTON_P_FILE = "/sys/class/leds/button-backlight-portrait/brightness";
+char const*const BUTTON_PORTAIT_FILE = "/sys/class/leds/button-backlight-portrait/brightness";
+char const*const BUTTON_LANDSCAPE_FILE = "/sys/class/leds/button-backlight-landscape/brightness";
+#define SENSOR_LANDSCAPE_MASK           (0x100)
 
 char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/blink";
@@ -52,6 +54,7 @@ enum {
 	LED_AMBER,
 	LED_GREEN,
 	LED_BLUE,
+	LED_RED,	
 	LED_BLANK,
 };
 
@@ -155,14 +158,12 @@ static void set_speaker_light_locked (struct light_device_t *dev, struct light_s
 					write_int (GREEN_LED_FILE, 0);
 					write_int (BLUE_LED_FILE, 0);
 					break;
-
 			}
 			break;
 		default:
 			LOGE("set_led_state colorRGB=%08X, unknown mode %d\n",
 					colorRGB, state->flashMode);
 	}
-
 }
 
 static void set_speaker_light_locked_dual (struct light_device_t *dev, struct light_state_t *bstate, struct light_state_t *nstate) {
@@ -202,8 +203,15 @@ static int set_light_buttons (struct light_device_t* dev,
 		struct light_state_t const* state) {
 	int err = 0;
 	int on = is_lit (state);
+
 	pthread_mutex_lock (&g_lock);
-	err = write_int (BUTTON_P_FILE, state->color&0xff);
+
+	if (state->color & SENSOR_LANDSCAPE_MASK) {
+		int brightness = state->color ^ SENSOR_LANDSCAPE_MASK;
+		err = write_int (BUTTON_LANDSCAPE_FILE, brightness&0xff);
+	} else
+		err = write_int (BUTTON_PORTAIT_FILE, state->color&0xff);
+
 	pthread_mutex_unlock (&g_lock);
 
 	return 0;
