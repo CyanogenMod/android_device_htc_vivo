@@ -65,4 +65,5 @@ postprocess.iso_midband=400
 postprocess.denoise_level=5
 
 # Recording Audio Workaround
+ro.camera.shutter.disable=1
 persist.camera.shutter.disable=1
