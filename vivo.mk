@@ -43,6 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y
 
+# Override /proc/sys/vm/dirty_ratio on UMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.umsdirtyratio=20
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/vivo/overlay
 
 # gsm config xml file
