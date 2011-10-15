@@ -52,7 +52,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/vivo/overlay
 
 # gsm config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/vivo/spn-conf.xml:system/etc/spn-conf.xml \
     device/htc/vivo/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
 PRODUCT_PACKAGES += \
