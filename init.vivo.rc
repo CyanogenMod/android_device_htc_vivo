@@ -26,6 +26,9 @@ on fs
     chown radio system /sys/camera_led_status/led_ril_status
     chmod 0640         /sys/camera_led_status/led_ril_status
 
+    chown radio radio /dev/radio_feedback
+    chmod 0660 /dev/radio_feedback
+
     chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
 
     # for disabling IPv6 over mobile network.
