@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
 PRODUCT_COPY_FILES += \
     device/htc/vivo/init.vivo.rc:root/init.vivo.rc \
+    device/htc/vivo/init.rc:root/init.rc \
     device/htc/vivo/ueventd.vivo.rc:root/ueventd.vivo.rc
 
 PRODUCT_COPY_FILES += \
