@@ -400,7 +400,7 @@ service hfag /system/bin/sdptool add --channel=10 HFAG
 
 service hsag /system/bin/sdptool add --channel=11 HSAG
     user bluetooth
-    isabled
+    disabled
     oneshot
 
 service opush /system/bin/sdptool add --channel=12 OPUSH
