@@ -56,6 +56,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     audio.primary.vivo \
+    gralloc.vivo \
     lights.vivo \
     sensors.vivo \
     gps.vivo
