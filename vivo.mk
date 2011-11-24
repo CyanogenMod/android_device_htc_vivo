@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
 PRODUCT_PACKAGES += \
+    audio.primary.vivo \
     lights.vivo \
     sensors.vivo \
     gps.vivo
