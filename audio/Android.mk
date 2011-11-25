@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(ARGET_BOOTLOADER_BOARD_NAME),vivo)
 ifeq ($(BOARD_USES_AUDIO_LEGACY),true)
 LOCAL_PATH := $(call my-dir)
 
@@ -40,4 +41,5 @@ LOCAL_WHOLE_STATIC_LIBRARIES := \
 
 include $(BUILD_SHARED_LIBRARY)
 
+endif
 endif

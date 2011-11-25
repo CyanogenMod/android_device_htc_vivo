@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/vivo/vivo-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/vivo/device-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -184,18 +184,15 @@ PRODUCT_COPY_FILES += \
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
 
-$(call inherit-product, build/target/product/full_base.mk)
-
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
-
-# media profiles and capabilities spec
-$(call inherit-product, device/htc/vivo/media_a1026.mk)
 
 # htc audio settings
 $(call inherit-product, device/htc/vivo/media_htcaudio.mk)
 
-$(call inherit-product-if-exists, vendor/htc/vivo/vivo-vendor.mk)
+$(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
+
+$(call inherit-product-if-exists, vendor/htc/vivo/device-vendor.mk)
 
 PRODUCT_NAME := htc_vivo
 PRODUCT_DEVICE := vivo
