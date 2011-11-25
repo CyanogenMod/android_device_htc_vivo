@@ -61,6 +61,12 @@ PRODUCT_PACKAGES += \
     sensors.vivo \
     gps.vivo
 
+# Input device calibration files
+PRODUCT_COPY_FILES += \
+    device/htc/vivo/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/vivo/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
+    device/htc/vivo/idc/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc
+
 # Keychars
 PRODUCT_COPY_FILES += \
     device/htc/vivo/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
