@@ -37,10 +37,7 @@ ro.ril.hsxpa=2
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
 
-# Define TCP buffer sizes
-net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
-
-wifi.interface=eth0
+wifi.interface=wlan0
 wifi.supplicant_scan_interval=15
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
