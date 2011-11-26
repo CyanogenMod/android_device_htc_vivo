@@ -38,5 +38,5 @@
              android:storageDescription="@string/storage_usb"
              android:primary="true"
              android:removable="false"
-             android:allowMassStorage="true" />
+             android:allowMassStorage="false" />
 </StorageList>

@@ -36,7 +36,6 @@ $(call inherit-product-if-exists, vendor/htc/vivo/device-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-htc \
     ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
     ro.com.google.gmsversion=2.3_r3 \
@@ -56,10 +55,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     audio.primary.vivo \
+    gps.vivo \
     gralloc.vivo \
     lights.vivo \
-    sensors.vivo \
-    gps.vivo
+    sensors.vivo
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
@@ -199,8 +198,3 @@ $(call inherit-product, device/htc/vivo/media_htcaudio.mk)
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/htc/vivo/device-vendor.mk)
-
-PRODUCT_NAME := htc_vivo
-PRODUCT_DEVICE := vivo
-PRODUCT_MODEL := HTC Incredible S
-PRODUCT_MANUFACTURER := HTC
