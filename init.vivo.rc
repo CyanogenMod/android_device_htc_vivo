@@ -3,9 +3,8 @@ on boot
     mkdir /data/radio 0770 radio radio
 
 on init
-    # export EXTERNAL_STORAGE /mnt/sdcard
+    export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
-    # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
 on fs
