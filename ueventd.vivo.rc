@@ -28,6 +28,6 @@
 /dev/akm8975_aot          0640   compass    system
 
 /dev/radio_feedback       0660   radio      radio
+/dev/smd*                 0640   radio      radio
 
-/dev/ttyHS0               0600   bluetoot   bluetoot
-/dev/ttyMSM0              0600   bluetoot   bluetoot
+/dev/ttyHS0               0660   bluetooth  bluetooth

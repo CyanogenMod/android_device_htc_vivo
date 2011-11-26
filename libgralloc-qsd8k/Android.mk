@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(ARGET_BOOTLOADER_BOARD_NAME),vivo)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),vivo)
 LOCAL_PATH := $(call my-dir)
 
 # HAL module implemenation, not prelinked and stored in
