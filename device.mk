@@ -93,7 +93,10 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/keylayout/vivo-keypad-ita.kl:system/usr/keylayout/vivo-keypad-ita.kl \
     device/htc/vivo/keylayout/vivo-keypad-tur.kl:system/usr/keylayout/vivo-keypad-tur.kl \
     device/htc/vivo/keylayout/vivo-keypad-wwe-bopomo.kl:system/usr/keylayout/vivo-keypad-wwe-bopomo.kl \
-    device/htc/vivo/keylayout/vivo-keypad-wwe.kl:system/usr/keylayout/vivo-keypad-wwe.kl
+    device/htc/vivo/keylayout/vivo-keypad-wwe.kl:system/usr/keylayout/vivo-keypad-wwe.kl \
+    device/htc/vivo/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
+    device/htc/vivo/keylayout/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl \
+    device/htc/vivo/keylayout/elan-touchscreen.kl:system/usr/keylayout/elan-touchscreen.kl
 
 # Firmware
 PRODUCT_COPY_FILES += \
