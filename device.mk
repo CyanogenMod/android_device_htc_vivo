@@ -53,12 +53,34 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/vivo/overlay
 PRODUCT_COPY_FILES += \
     device/htc/vivo/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
+
+# Audio
 PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio_policy.vivo \
     audio.primary.vivo \
+    libaudioutils
+
+# Video
+PRODUCT_PACKAGES += \
+    copybit.msm7x30 \
+    gralloc.msm7x30 \
+    hwcomposer.msm7x30 \
+    libgenlock \
+    libmemalloc \
+    liboverlay \
+    libQcomUI \
+    libtilerenderer
+
+# Sensors, GPS, Lights
+PRODUCT_PACKAGES += \
     gps.vivo \
-    gralloc.vivo \
     lights.vivo \
     sensors.vivo
+
+# Misc
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
