@@ -56,31 +56,14 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio_policy.vivo \
-    audio.primary.vivo \
-    libaudioutils
-
-# Video
-PRODUCT_PACKAGES += \
-    copybit.msm7x30 \
-    gralloc.msm7x30 \
-    hwcomposer.msm7x30 \
-    libgenlock \
-    libmemalloc \
-    liboverlay \
-    libQcomUI \
-    libtilerenderer
+    audio.primary.vivo
 
 # Sensors, GPS, Lights
 PRODUCT_PACKAGES += \
     gps.vivo \
     lights.vivo \
     sensors.vivo
-
-# Misc
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
