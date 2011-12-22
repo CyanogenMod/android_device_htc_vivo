@@ -39,5 +39,4 @@ $(call inherit-product, device/htc/vivo/device.mk)
 PRODUCT_NAME := full_vivo
 PRODUCT_DEVICE := vivo
 PRODUCT_BRAND := HTC
-PRODUCT_MANUFACTURER := HTC
 PRODUCT_MODEL := Incredible S

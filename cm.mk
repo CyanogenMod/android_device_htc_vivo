@@ -1,5 +1,7 @@
 $(call inherit-product, device/htc/vivo/full_vivo.mk)
 
+PRODUCT_RELEASE_NAME := IncS
+
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
