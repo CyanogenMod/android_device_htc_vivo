@@ -53,9 +53,6 @@ mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 # This is a 16.16 fixed point number
 ro.opengles.version=131072
 
-# This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=48m
-
 # For the default value of agps
 ro.ril.def.agps.mode=2
 
