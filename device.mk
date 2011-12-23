@@ -53,12 +53,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/vivo/overlay
 PRODUCT_COPY_FILES += \
     device/htc/vivo/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio_policy.vivo \
-    audio.primary.vivo
-
 # Sensors, GPS, Lights
 PRODUCT_PACKAGES += \
     gps.vivo \
@@ -119,7 +113,6 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
     device/htc/vivo/dsp/AIC3254_REG_DualMic_NEL.csv:system/etc/AIC3254_REG_DualMic_NEL.csv \
     device/htc/vivo/dsp/AIC3254_REG_DualMicXB.csv:system/etc/AIC3254_REG_DualMicXB.csv \
-    device/htc/vivo/dsp/AudioBTID.csv:system/etc/AudioBTID.csv \
     device/htc/vivo/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
     device/htc/vivo/dsp/TPA2051_CFG_NEL.csv:system/etc/TPA2051_CFG_NEL.csv \
     device/htc/vivo/dsp/CodecDSPID_BCLK.txt:system/etc/CodecDSPID_BCLK.txt \
