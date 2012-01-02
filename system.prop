@@ -5,11 +5,11 @@ ro.sf.lcd_density=240
 
 debug.fb.rgb565=0
 
-# qcom display
 debug.sf.hw=1
-debug.composition.type=dyn
-ro.sf.compbypass.enable=1
+debug.composition.type=c2d
 #debug.enabletr=true
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
 
 # cm qcom build lub
 com.qc.hardware=true
