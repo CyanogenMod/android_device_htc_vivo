@@ -35,8 +35,8 @@
 <StorageList xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- removable is not set in nosdcard product -->
     <storage android:mountPoint="/mnt/sdcard"
-             android:storageDescription="@string/storage_usb"
+             android:storageDescription="@string/storage_sd_card"
              android:primary="true"
-             android:removable="false"
-             android:allowMassStorage="false" />
+             android:removable="true"
+             android:allowMassStorage="true" />
 </StorageList>
