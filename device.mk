@@ -62,22 +62,15 @@ PRODUCT_PACKAGES += \
 # Input device calibration files
 PRODUCT_COPY_FILES += \
     device/htc/vivo/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/vivo/idc/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc \
     device/htc/vivo/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
-    device/htc/vivo/idc/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc
+    device/htc/vivo/idc/vivo-keypad.idc:system/usr/idc/vivo-keypad.idc
 
 # Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/vivo/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/vivo/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad.kcm.bin:system/usr/keychars/vivo-keypad.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-ara.kcm.bin:system/usr/keychars/vivo-keypad-ara.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-ell.kcm.bin:system/usr/keychars/vivo-keypad-ell.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-fra.kcm.bin:system/usr/keychars/vivo-keypad-fra.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-ger.kcm.bin:system/usr/keychars/vivo-keypad-ger.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-ita.kcm.bin:system/usr/keychars/vivo-keypad-ita.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-tur.kcm.bin:system/usr/keychars/vivo-keypad-tur.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-wwe-bopomo.kcm.bin:system/usr/keychars/vivo-keypad-wwe-bopomo.kcm.bin \
-    device/htc/vivo/keychars/vivo-keypad-wwe.kcm.bin:system/usr/keychars/vivo-keypad-wwe.kcm.bin
+    device/htc/vivo/keychars/atmel-touchscreen.kcm:system/usr/keychars/atmel-touchscreen.kcm \
+    device/htc/vivo/keychars/cy8c-touchscreen.kcm:system/usr/keychars/cy8c-touchscreen.kcm \
+    device/htc/vivo/keychars/elan-touchscreen.kcm:system/usr/keychars/elan-touchscreen.kcm
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -85,14 +78,6 @@ PRODUCT_COPY_FILES += \
     device/htc/vivo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/vivo/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/vivo/keylayout/vivo-keypad.kl:system/usr/keylayout/vivo-keypad.kl \
-    device/htc/vivo/keylayout/vivo-keypad-ara.kl:system/usr/keylayout/vivo-keypad-ara.kl \
-    device/htc/vivo/keylayout/vivo-keypad-ell.kl:system/usr/keylayout/vivo-keypad-ell.kl \
-    device/htc/vivo/keylayout/vivo-keypad-fra.kl:system/usr/keylayout/vivo-keypad-fra.kl \
-    device/htc/vivo/keylayout/vivo-keypad-ger.kl:system/usr/keylayout/vivo-keypad-ger.kl \
-    device/htc/vivo/keylayout/vivo-keypad-ita.kl:system/usr/keylayout/vivo-keypad-ita.kl \
-    device/htc/vivo/keylayout/vivo-keypad-tur.kl:system/usr/keylayout/vivo-keypad-tur.kl \
-    device/htc/vivo/keylayout/vivo-keypad-wwe-bopomo.kl:system/usr/keylayout/vivo-keypad-wwe-bopomo.kl \
-    device/htc/vivo/keylayout/vivo-keypad-wwe.kl:system/usr/keylayout/vivo-keypad-wwe.kl \
     device/htc/vivo/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
     device/htc/vivo/keylayout/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl \
     device/htc/vivo/keylayout/elan-touchscreen.kl:system/usr/keylayout/elan-touchscreen.kl
