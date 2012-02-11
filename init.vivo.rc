@@ -143,8 +143,27 @@ service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
     disabled
     oneshot
 
+service lights_landscape /system/bin/sh /system/etc/rotate_lights.sh 1
+#    class main
+    user root
+    disabled
+    oneshot
+
+service lights_portrait /system/bin/sh /system/etc/rotate_lights.sh 0
+#    class main
+    user root
+    disabled
+    oneshot
+
 on property:ro.build.tags=test-keys
     start htc_ebdlogd
 
 on property:ro.build.tags=release-keys
     start htc_ebdlogd_rel
+
+on property:sys.orientation.landscape=1
+    start lights_landscape
+
+on property:sys.orientation.landscape=0
+    start lights_portrait
+
