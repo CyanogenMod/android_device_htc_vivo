@@ -171,3 +171,7 @@ on property:ro.build.tags=test-keys
 
 on property:ro.build.tags=release-keys
     start htc_ebdlogd_rel
+
+on property:sys.radio.shutdown=true
+    write /sys/devices/platform/rs300000a7.65536/force_sync 1
+    write /sys/devices/platform/rs300100a7.65536/force_sync 1
