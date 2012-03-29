@@ -68,3 +68,6 @@ postprocess.denoise_level=5
 
 # Recording Audio Workaround
 ro.camera.sound.disabled=1
+
+# USB Mounting
+persist.sys.usb.config=mass_storage,adb
