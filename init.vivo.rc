@@ -11,10 +11,12 @@ on early-fs
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
     mount ext4 /dev/block/mmcblk0p25 /system wait ro barrier=1
+    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
     mount ext4 /dev/block/mmcblk0p26 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
     mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
 
+on post-fs-data
     mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -22,6 +24,10 @@ on early-fs
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
+
+on boot
     chown radio system /sys/module/gpio_event/parameters/phone_call_status
     chmod 0664         /sys/module/gpio_event/parameters/phone_call_status
 
@@ -87,7 +93,6 @@ on early-fs
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 90
     write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 50000
 
-on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf
