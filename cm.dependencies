@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_htc_msm7x30-common",
+    "target_path": "device/htc/msm7x30-common"
+  }
+]
